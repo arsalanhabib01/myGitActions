@@ -16,5 +16,9 @@ jobs:
         env:
           DEFAULT:BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          node-version: '14'
+      - run: npm install -g bats
+      - run: bats -v
 
 
