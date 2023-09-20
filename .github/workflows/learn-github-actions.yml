@@ -7,7 +7,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
-      - uses: github/super-linter@v3
+      - uses: github/super-linter@v2
         with:
           node-version: '14'
       - run: npm install -g bats
