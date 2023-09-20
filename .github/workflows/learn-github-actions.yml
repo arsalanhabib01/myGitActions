@@ -7,8 +7,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
-      - uses: github/super-linter@v3
+      - uses: github/super-linter@v4
         env:
           DEFAULT:BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
 
