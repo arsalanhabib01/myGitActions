@@ -5,9 +5,14 @@ jobs:
   check-bats-version:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-      - uses: github/super-linter@v4
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup node
+        uses: actions/setup-node@v3
+
+      - name: Run Super-Linter
+        uses: github/super-linter@v4
         env:
           DEFAULT:BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
